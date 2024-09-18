@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про себе</a></li>
+                    <li><a href="https://github.com/ArtemRomashko/WEB">Практичні роботи</a></li>
+                    <li><a href="https://github.com/ArtemRomashko/WEB">Лабораторні роботи</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="reg_form">
+                <h1>Registration form</h1>
+                <form action="https://webhook.site" method="post">
+                    <label for="Name">Name:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="text" name="Name" id="Name" required>
+                    <br>
+                    <label for="SurName">SurName:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="text" name="SurName" id="Surname" required>
+                    <br>
+                    <label for="email">Email:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="email" name="email" id="email" required>
+                    <br>
+                    <label for="password">Pass:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="password" name="password" id="password" required>
+                    <br>
+                    <label for="C_pass">Confirm password:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="password" name="C_pass" id="C_pass" required>
+                    <br><br>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <button>Send</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>Контакт: artomromasko@gmail.com</p>
+            <p><a href="https://github.com/ArtemRomashko">Мій GitHub</a></p>
+        </footer>
+    </div>
+    <!-- Підключення JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
