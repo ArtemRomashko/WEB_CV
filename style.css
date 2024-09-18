@@ -58,17 +58,17 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Білий колір для посилань */
+    color: #333; /* Темний колір для тексту посилань */
     text-decoration: none;
     position: relative;
     display: inline-block;
     font-weight: bold; /* Зробити текст жирним для кращої видимості */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Додати плавний перехід для кольору і тіні тексту */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавний перехід для кольору і тіні тексту */
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Зміна кольору на жовтий при наведенні */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Додати тінь для підвищення контрастності */
+    color: #ffcc00; /* Жовтий колір при наведенні */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Додати тінь для кращої видимості */
 }
 
 nav ul li a::before {
@@ -130,7 +130,7 @@ ul li a {
 }
 
 ul li a:hover {
-    color: #ffcc00; /* Зміна кольору на жовтий при наведенні */
+    color: #ffcc00; /* Жовтий колір при наведенні */
 }
 
 ul li span {
