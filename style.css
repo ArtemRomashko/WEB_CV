@@ -217,3 +217,58 @@ button {
 a {
     transition: opacity 0.5s ease-in-out;
 }
+
+/* Адаптація для мобільних пристроїв */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 100%; /* Ширина для мобільних екранів */
+        box-shadow: none; /* Прибрати тіні для простішого вигляду */
+        border-radius: 0; /* Вирівняти кути */
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Вирівняти меню у вертикальний список */
+        text-align: left; /* Вирівняти текст по лівому краю */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h2, h3 {
+        font-size: 24px; /* Зменшити заголовки */
+        text-align: center; /* Центрувати заголовки */
+    }
+
+    p, ul li a {
+        font-size: 16px; /* Зменшити розмір тексту для мобільних */
+    }
+
+    ul li {
+        padding: 10px;
+    }
+
+    /* Стилі для зображень у мобільній версії */
+    #about img {
+        width: 100px; /* Зменшити розмір зображення */
+        margin: 0 auto; /* Центрувати */
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 14px; /* Зменшити розмір шрифту у футері */
+    }
+
+    button {
+        width: 100%; /* Кнопки займають всю ширину екрану */
+    }
+}
