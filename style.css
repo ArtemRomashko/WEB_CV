@@ -9,14 +9,29 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(90deg, white, lightgray, gray, lightgray, white);
+    background-size: 400% 100%; /* Збільшує область фону для плавнішого переходу */
+    animation: gradientAnimation 10s ease infinite; /* Подовжено час анімації */
     color: #333;
     text-align: center;
     opacity: 0; /* Початкова непрозорість для анімації */
-    transition: opacity 0.5s ease-in-out; /* Плавний перехід */
+    transition: opacity 0.01s ease-in-out; /* Плавний перехід */
     display: flex;
     flex-direction: column; /* Розташовує контент вертикально */
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Початкова позиція */
+    }
+    50% {
+        background-position: 100% 50%; /* Середина анімації */
+    }
+    100% {
+        background-position: 0% 50%; /* Повернення до початкової позиції */
+    }
+}
+
 
 body.loaded {
     opacity: 1; /* Повна прозорість після завантаження */
@@ -170,13 +185,13 @@ p {
 #about img {
     width: 150px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 10%;
     display: block;
     margin: 0 auto 20px auto; /* Центрує зображення та додає відступ знизу */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для фото */
 }
 
-/* Стилі для футера */
+/* Стилі для футера */  
 footer {
     text-align: center;
     padding: 10px;
