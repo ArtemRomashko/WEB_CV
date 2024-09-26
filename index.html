@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <link rel="icon" href="img\ico\main.png" type="png">
+    <link rel="icon" href="img/ico/main.png" type="png">
 </head>
 
 <body>
@@ -19,7 +19,6 @@
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="about.html">Про себе</a></li>
-                    <!-- Додаємо target="_blank" і rel="noopener noreferrer" для зовнішніх посилань -->
                     <li><a href="https://github.com/ArtemRomashko/WEB_CV" target="_blank"
                             rel="noopener noreferrer">Практичні роботи</a></li>
                     <li><a href="https://github.com/ArtemRomashko/WEB_CV" target="_blank"
@@ -33,12 +32,12 @@
                 <h2>Практичні роботи</h2>
                 <ul>
                     <li>
-                        <a href="index.html">Практична робота 1</a>
-                        <span>Мета: основи гіпертекстової розмітки мовою HTML.</span>
+                        <a href="table.html">Практична робота 1</a>
+                        <span>Мета: створити таблицю з розкладом.</span>
                     </li>
                     <li>
-                        <a href="table.html">Практична робота 2</a>
-                        <span>Мета: створити таблицю з розкладом.</span>
+                        <a href="index.html">Практична робота 2</a>
+                        <span>Ще нема</span>
                     </li>
                     <li>
                         <a href="index.html">Практична робота 3</a>
@@ -68,15 +67,12 @@
 
         <footer>
             <p>Контакт: artomromasko@gmail.com</p>
-            <!-- Додаємо target="_blank" і rel="noopener noreferrer" для зовнішнього посилання на GitHub -->
             <p><a href="https://github.com/ArtemRomashko" target="_blank" rel="noopener noreferrer">Мій GitHub</a></p>
         </footer>
     </div>
 
-    <!-- Підключення JavaScript -->
     <script src="script.js"></script>
     <script>
-        // Перезавантаження сторінки при поверненні через кнопку "Назад" у браузері
         window.onpageshow = function (event) {
             if (event.persisted) {
                 window.location.reload();

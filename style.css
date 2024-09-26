@@ -32,7 +32,6 @@ body {
     }
 }
 
-
 body.loaded {
     opacity: 1; /* Повна прозорість після завантаження */
 }
@@ -49,9 +48,8 @@ main {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Закруглені кути */
+    background-color: transparent; /* Зроблено прозорим */
+    box-shadow: none; /* Прибрано тінь */
 }
 
 header {
@@ -109,9 +107,8 @@ section {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Закруглені кути */
+    background-color: transparent; /* Зроблено прозорим */
+    box-shadow: none; /* Прибрано тінь */
 }
 
 /* Стилі для списків практичних і лабораторних робіт */
@@ -287,6 +284,7 @@ a {
         width: 100%; /* Кнопки займають всю ширину екрану */
     }
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
