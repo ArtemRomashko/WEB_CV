@@ -139,10 +139,32 @@ ul li a {
     color: #333; /* Темний колір для тексту посилання */
     text-decoration: none;
     font-weight: bold; /* Зробити текст жирним для кращої видимості */
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc00; /* Жовта лінія під посиланням */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
 }
 
 ul li a:hover {
     color: #ffcc00; /* Жовтий колір при наведенні */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Додати тінь для кращої видимості */
+}
+
+ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 ul li span {
@@ -188,7 +210,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для фото */
 }
 
-/* Стилі для футера */  
+/* Стилі для футера */
 footer {
     text-align: center;
     padding: 10px;
@@ -262,53 +284,37 @@ a {
     }
 
     p, ul li a {
-        font-size: 16px; /* Зменшити розмір тексту для мобільних */
-    }
-
-    ul li {
-        padding: 10px;
-    }
-
-    /* Стилі для зображень у мобільній версії */
-    #about img {
-        width: 100px; /* Зменшити розмір зображення */
-        margin: 0 auto; /* Центрувати */
+        font-size: 16px; /* Зменшити шрифт */
     }
 
     footer {
-        padding: 10px;
-        font-size: 14px; /* Зменшити розмір шрифту у футері */
-    }
-
-    button {
-        width: 100%; /* Кнопки займають всю ширину екрану */
+        padding: 5px; /* Зменшити відступи у футері */
     }
 }
-
+/* Стилі для таблиці розкладу занять */
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+    border-collapse: collapse; /* Видаляє прогалини між комірками */
+    margin-bottom: 20px;
+    border: 2px solid black; /* Чітка зовнішня границя таблиці */
 }
 
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 10px;
+table th, table td {
+    border: 2px solid black; /* Границі для комірок */
+    padding: 12px; /* Внутрішні відступи */
     text-align: center;
 }
 
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+table th {
+    background-color: #333; /* Фон заголовків таблиці */
+    color: white; /* Колір тексту заголовків */
+    text-transform: uppercase; /* Великий регістр для заголовків */
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Фон для парних рядків */
 }
 
-tbody tr:hover {
-    background-color: #e2e2e2;
+table tr:hover {
+    background-color: #ddd; /* Фон для рядка при наведенні */
 }
