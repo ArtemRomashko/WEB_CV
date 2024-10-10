@@ -1,320 +1,349 @@
 /* Загальні стилі */
-html, body {
-    height: 100%; /* Забезпечує, що body займає всю висоту екрану */
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%; /* Забезпечує, що body займає всю висоту екрану */
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(90deg, white, lightgray, gray, lightgray, white);
-    background-size: 400% 100%; /* Збільшує область фону для плавнішого переходу */
-    animation: gradientAnimation 10s ease infinite; /* Подовжено час анімації */
-    color: #333;
-    text-align: center;
-    opacity: 0; /* Початкова непрозорість для анімації */
-    transition: opacity 0.01s ease-in-out; /* Плавний перехід */
-    display: flex;
-    flex-direction: column; /* Розташовує контент вертикально */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, white, lightgray, gray, lightgray, white);
+  background-size: 400% 100%; /* Збільшує область фону для плавнішого переходу */
+  animation: gradientAnimation 10s ease infinite; /* Подовжено час анімації */
+  color: #333;
+  text-align: center;
+  opacity: 0; /* Початкова непрозорість для анімації */
+  transition: opacity 0.01s ease-in-out; /* Плавний перехід */
+  display: flex;
+  flex-direction: column; /* Розташовує контент вертикально */
 }
 
 @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%; /* Початкова позиція */
-    }
-    50% {
-        background-position: 100% 50%; /* Середина анімації */
-    }
-    100% {
-        background-position: 0% 50%; /* Повернення до початкової позиції */
-    }
+  0% {
+    background-position: 0% 50%; /* Початкова позиція */
+  }
+  50% {
+    background-position: 100% 50%; /* Середина анімації */
+  }
+  100% {
+    background-position: 0% 50%; /* Повернення до початкової позиції */
+  }
 }
 
 body.loaded {
-    opacity: 1; /* Повна прозорість після завантаження */
+  opacity: 1; /* Повна прозорість після завантаження */
 }
 
 .page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Висота контейнера для забезпечення футера внизу */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Висота контейнера для забезпечення футера внизу */
 }
 
 /* Головний контент */
 main {
-    flex: 1; /* Дозволяє основному контенту займати залишкову висоту */
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: transparent; /* Зроблено прозорим */
-    box-shadow: none; /* Прибрано тінь */
+  flex: 1; /* Дозволяє основному контенту займати залишкову висоту */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: transparent; /* Зроблено прозорим */
+  box-shadow: none; /* Прибрано тінь */
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: #333; /* Темний колір для тексту посилань */
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    font-weight: bold; /* Зробити текст жирним для кращої видимості */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавний перехід для кольору і тіні тексту */
+  color: #333; /* Темний колір для тексту посилань */
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  font-weight: bold; /* Зробити текст жирним для кращої видимості */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавний перехід для кольору і тіні тексту */
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Жовтий колір при наведенні */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Додати тінь для кращої видимості */
+  color: #ffcc00; /* Жовтий колір при наведенні */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Додати тінь для кращої видимості */
 }
 
 nav ul li a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffcc00; /* Жовта лінія під посиланням */
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcc00; /* Жовта лінія під посиланням */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
 }
 
 nav ul li a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 /* Стилі для секцій */
 section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: transparent; /* Зроблено прозорим */
-    box-shadow: none; /* Прибрано тінь */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: transparent; /* Зроблено прозорим */
+  box-shadow: none; /* Прибрано тінь */
 }
 
 /* Стилі для списків практичних і лабораторних робіт */
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 ul li {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 ul li:hover {
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 ul li a {
-    color: #333; /* Темний колір для тексту посилання */
-    text-decoration: none;
-    font-weight: bold; /* Зробити текст жирним для кращої видимості */
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: #333; /* Темний колір для тексту посилання */
+  text-decoration: none;
+  font-weight: bold; /* Зробити текст жирним для кращої видимості */
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 ul li a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffcc00; /* Жовта лінія під посиланням */
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcc00; /* Жовта лінія під посиланням */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
 }
 
 ul li a:hover {
-    color: #ffcc00; /* Жовтий колір при наведенні */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Додати тінь для кращої видимості */
+  color: #ffcc00; /* Жовтий колір при наведенні */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Додати тінь для кращої видимості */
 }
 
 ul li a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 ul li span {
-    display: block;
-    margin-top: 5px;
-    color: #666;
+  display: block;
+  margin-top: 5px;
+  color: #666;
 }
 
 /* Стилі для заголовків та параграфів */
-h2, h3 {
-    color: #333;
-    margin-bottom: 15px;
+h2,
+h3 {
+  color: #333;
+  margin-bottom: 15px;
 }
 
 h2 {
-    font-size: 28px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
 h3 {
-    font-size: 22px;
-    color: #555;
-    text-align: left;
+  font-size: 22px;
+  color: #555;
+  text-align: left;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: left;
-    color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #666;
 }
 
 /* Стилі для зображень в секції "Про мене" */
 #about img {
-    width: 150px;
-    height: auto;
-    border-radius: 10%;
-    display: block;
-    margin: 0 auto 20px auto; /* Центрує зображення та додає відступ знизу */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для фото */
+  width: 150px;
+  height: auto;
+  border-radius: 10%;
+  display: block;
+  margin: 0 auto 20px auto; /* Центрує зображення та додає відступ знизу */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для фото */
 }
 
 /* Стилі для футера */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
 }
 
 footer a {
-    color: #ffcc00; /* Жовтий колір для посилань у футері */
-    text-decoration: none;
+  color: #ffcc00; /* Жовтий колір для посилань у футері */
+  text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Стилі для форм */
 .reg_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
-    background: green;
-    color: white;
-    font-weight: bold;
-    width: 80px;
-    border: none;
-    border-radius: 3px;
+  background: green;
+  color: white;
+  font-weight: bold;
+  width: 80px;
+  border: none;
+  border-radius: 3px;
 }
 
 /* Плавний перехід для сторінок */
 a {
-    transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* Адаптація для мобільних пристроїв */
 @media only screen and (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
+  body {
+    padding: 10px;
+  }
 
-    main {
-        padding: 10px;
-        margin: 10px auto;
-        max-width: 100%; /* Ширина для мобільних екранів */
-        box-shadow: none; /* Прибрати тіні для простішого вигляду */
-        border-radius: 0; /* Вирівняти кути */
-    }
+  main {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 100%; /* Ширина для мобільних екранів */
+    box-shadow: none; /* Прибрати тіні для простішого вигляду */
+    border-radius: 0; /* Вирівняти кути */
+  }
 
-    nav ul {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column; /* Вирівняти меню у вертикальний список */
-        text-align: left; /* Вирівняти текст по лівому краю */
-    }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Вирівняти меню у вертикальний список */
+    text-align: left; /* Вирівняти текст по лівому краю */
+  }
 
-    nav ul li {
-        margin: 10px 0;
-    }
+  nav ul li {
+    margin: 10px 0;
+  }
 
-    h2, h3 {
-        font-size: 24px; /* Зменшити заголовки */
-        text-align: center; /* Центрувати заголовки */
-    }
+  h2,
+  h3 {
+    font-size: 24px; /* Зменшити заголовки */
+    text-align: center; /* Центрувати заголовки */
+  }
 
-    p, ul li a {
-        font-size: 16px; /* Зменшити шрифт */
-    }
+  p,
+  ul li a {
+    font-size: 16px; /* Зменшити шрифт */
+  }
 
-    footer {
-        padding: 5px; /* Зменшити відступи у футері */
-    }
+  footer {
+    padding: 5px; /* Зменшити відступи у футері */
+  }
 }
 /* Стилі для таблиці розкладу занять */
 table {
-    width: 100%;
-    border-collapse: collapse; /* Видаляє прогалини між комірками */
-    margin-bottom: 20px;
-    border: 2px solid black; /* Чітка зовнішня границя таблиці */
+  width: 100%;
+  border-collapse: collapse; /* Видаляє прогалини між комірками */
+  margin-bottom: 20px;
+  border: 2px solid black; /* Чітка зовнішня границя таблиці */
 }
 
-table th, table td {
-    border: 2px solid black; /* Границі для комірок */
-    padding: 12px; /* Внутрішні відступи */
-    text-align: center;
+table th,
+table td {
+  border: 2px solid black; /* Границі для комірок */
+  padding: 12px; /* Внутрішні відступи */
+  text-align: center;
 }
 
 table th {
-    background-color: #333; /* Фон заголовків таблиці */
-    color: white; /* Колір тексту заголовків */
-    text-transform: uppercase; /* Великий регістр для заголовків */
+  background-color: #333; /* Фон заголовків таблиці */
+  color: white; /* Колір тексту заголовків */
+  text-transform: uppercase; /* Великий регістр для заголовків */
 }
 
 table tr:nth-child(even) {
-    background-color: #f2f2f2; /* Фон для парних рядків */
+  background-color: #f2f2f2; /* Фон для парних рядків */
 }
 
 table tr:hover {
-    background-color: #ddd; /* Фон для рядка при наведенні */
+  background-color: #ddd; /* Фон для рядка при наведенні */
+}
+
+/* Вирівнюємо контейнер для перемикача */
+#languageSwitcherContainer {
+  position: absolute; /* Абсолютне позиціонування */
+  top: 10px; /* Відступ зверху */
+  right: 10px; /* Відступ справа */
+  display: flex; /* Для вирівнювання елементів у рядок */
+  justify-content: flex-end; /* Вирівнювання до правого краю */
+}
+
+/* Основні стилі для перемикача мов */
+#languageSwitcher {
+  padding: 10px 15px; /* Внутрішні відступи для кращого вигляду */
+  font-size: 16px; /* Розмір шрифту */
+  color: #333; /* Темний колір для тексту */
+  border: 1px solid #ccc; /* Рамка для виділення */
+  border-radius: 4px; /* Закруглені кути */
+  background-color: white; /* Білий фон для перемикача */
+}
+
+/* Додаткові стилі для hover */
+#languageSwitcher:hover {
+  border-color: #ffcc00; /* Жовта рамка при наведенні */
 }

@@ -1,0 +1,49 @@
+{
+  "title": "Home",
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "practical": "Practical Works",
+    "labs": "Laboratory Works"
+  },
+  "sections": {
+    "practical": {
+      "title": "Practical Works",
+      "tasks": [
+        {
+          "name": "Practical Work 1",
+          "description": "Goal: Create a schedule table."
+        },
+        {
+          "name": "Practical Work 2",
+          "description": "Goal: Create a YouTube copy"
+        },
+        {
+          "name": "Practical Work 3",
+          "description": "Not yet available"
+        }
+      ]
+    },
+    "labs": {
+      "title": "Laboratory Works",
+      "tasks": [
+        {
+          "name": "Laboratory Work 1",
+          "description": "Goal: Create a registration page."
+        },
+        {
+          "name": "Laboratory Work 2",
+          "description": "Goal: Study CSS styles."
+        },
+        {
+          "name": "Laboratory Work 3",
+          "description": "Not yet available."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "contact": "Contact: artomromasko@gmail.com",
+    "github": "My GitHub"
+  }
+}

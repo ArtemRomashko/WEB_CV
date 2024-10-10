@@ -1,0 +1,34 @@
+{
+  "title": "About Me",
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "practical": "Practical Works",
+    "labs": "Laboratory Works"
+  },
+  "about": {
+    "name": "Artem Romashko",
+    "intro": "Hello! I am Artem Romashko, a student who is actively engaged in sports and always striving for self-development. I believe that self-improvement is the key to success in both life and career.",
+    "sections": {
+      "sport": {
+        "title": "Sports and Active Lifestyle",
+        "text": "One of the most important aspects of my life is sports. I regularly go to the gym where I work on myself and my body. I am motivated by constant progress and achieving new results. I also love cycling, as it is a great way to stay fit while enjoying nature."
+      },
+      "social": {
+        "title": "Social Activity",
+        "text": "I am a socially active person, always open to new acquaintances and conversations. New people and interesting talks give me energy and help broaden my worldview. I believe that every meeting can be the start of something extraordinary."
+      },
+      "goals": {
+        "title": "Goals and Aspirations",
+        "text": "My main goal is continuous self-improvement. I always strive to reach new heights, both in education and in personal life. It's important for me not to stop at what I've achieved and always look for opportunities for growth, whether in sports, education, or the social sphere."
+      },
+      "motivation": {
+        "text": "I am an open and ambitious person, always looking for new ways to improve and succeed. New challenges motivate me, and I am always ready to meet them with enthusiasm."
+      }
+    }
+  },
+  "footer": {
+    "contact": "Contact: artomromasko@gmail.com",
+    "github": "My GitHub"
+  }
+}
