@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+  padding: 20px;
+}
+
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.profile h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile p {
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-info p {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+}
+
+.left-column {
+  flex: 2;
+}
+
+.right-column {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+}
+
+.job,
+.education-entry {
+  margin-bottom: 20px;
+}
+
+.job h3,
+.education-entry h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.job p,
+.education-entry p {
+  font-size: 14px;
+  color: #555;
+}
+
+.right-column ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.right-column ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.right-column ul li::before {
+  content: "• ";
+  color: #777;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
